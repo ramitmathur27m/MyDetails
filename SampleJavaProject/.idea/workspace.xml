@@ -76,11 +76,11 @@
       </method>
     </configuration>
     <configuration name="StreamMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.demo.java.stream.StreamMain" />
+      <option name="MAIN_CLASS_NAME" value="basic.java.com.classes.StreamMain" />
       <module name="SampleJavaProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.demo.java.stream.*" />
+          <option name="PATTERN" value="basic.java.com.classes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
