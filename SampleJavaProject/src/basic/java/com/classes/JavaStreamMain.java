@@ -3,6 +3,7 @@ package basic.java.com.classes;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class JavaStreamMain {
 
@@ -21,6 +22,8 @@ public class JavaStreamMain {
         System.out.println("Printing List--> ");
         jsm.printList(myList);
         myList.stream().forEach(ele->jsm.printList(ele));
+        jsm.getFilterStream();
+        jsm.getMapResult();
 
     }
 
@@ -43,4 +46,23 @@ public class JavaStreamMain {
         rec.setlName("Martin");
 return null;
     }
+
+    public void getFilterStream(){
+        System.out.println("inside getFilterStream");
+        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+        List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+        filtered.stream().forEach(s-> System.out.println(s));
+    }
+
+    public void getMapResult(){
+        System.out.println("inside getMapResult");
+        //List<Integer> numbersList = Arrays.asList(1,2,3,4,5,6,8);
+       // List<Integer> squaresList =numbersList.stream().map(i -> i*2).distinct().collect(Collectors.toList());
+        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+        List<String> mappedList = strings.stream().map(s-> s+"LLL").distinct().collect(Collectors.toList());
+        mappedList.stream().forEach(j -> System.out.println(j));
+
+    }
+
+
 }
